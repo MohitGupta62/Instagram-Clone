@@ -1,0 +1,28 @@
+<% include ./partials/header.ejs %>
+<div class="h-screen w-full bg-zinc-800">
+    <div class="w-full h-[12vw] bg-green-600 flex justify-between items-center">
+            <a href="/feed">
+                <i class="ri-arrow-left-s-line text-white text-4xl"></i>
+            </a>
+            <h1 class="text-white text-2xl">Comments</h1>
+        <div class="nothing"></div> 
+    </div>
+    <div class="w-full h-[15vw] title px-2 flex items-center bg-red-400 gap-2">
+        <div class="w-[8vw] h-[8vw] bg-sky-100 rounded-full overflow-hidden">
+            <img data-id="<%= post.caption%>" class="w-full h-full object-cover" src="/images/uploads/<%= post.user.profileImage %>" alt="">
+        </div>
+        <p class="text-white text-xl ml-2"><%= post.user.username %> <samp>:<%= post.caption%></samp></p>
+    </div>
+    <input id="comment" class="ml-0 mt-[691px] w-[300px] h-[41px] bg-zinc-900 outline-none text-zinc-400" type="text" placeholder="comment box">
+    <button class="border-2 py-2 px-4  bg-zinc-900 text-zinc-400">submit</button>
+    
+
+     <!-- <div class="post-container">
+        <img class="post-picture" src="/images/uploads/<%= user.picture %>" alt="Post Picture">
+        <p class="post-username"><%= user.username %></p>
+        Any other post details you want to display 
+     </div>  -->
+
+
+</div>
+<% include ./partials/footer.ejs %>
